@@ -1,0 +1,255 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #202124; /* Light Mode Text */
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: inherit;  /* inherit color based on theme */
+    text-align: center;
+}
+
+/* Button */
+button {
+    background-color: #1a73e8;
+    color: white;
+    font-size: 14px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #1558b0;
+}
+
+/* Link */
+a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Input Fields */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #dcdfe1;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    color: #202124; /* Light Mode Text */
+}
+
+input:focus, textarea:focus {
+    border-color: #1a73e8;
+    outline: none;
+    box-shadow: 0 0 2px rgba(26, 115, 232, 0.4);
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #202124;
+    color: #e8eaed; /* Dark Mode Text */
+}
+
+.dark-mode .container {
+    background-color: #303134;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode button {
+    background-color: #4285f4;
+}
+
+.dark-mode input, .dark-mode textarea {
+    background-color: #202124;
+    color: #e8eaed; /* Dark Mode Text */
+    border-color: #5f6368;
+}
+
+.dark-mode a {
+    color: #8ab4f8;
+}
+
+/* Email list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #f1f3f4;
+}
+
+ul li .email-details {
+    flex: 1;
+}
+
+ul li .email-actions {
+    display: flex;
+    gap: 10px;
+}
+
+ul li .email-actions button {
+    padding: 8px 12px;
+    font-size: 12px;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    color: #5f6368;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+ul li .email-actions button:hover {
+    background-color: #e8eaed;
+    color: #202124;
+}
+
+ul li .email-actions button:active {
+    background-color: #dfe1e5;
+}
+
+/* Form container */
+form {
+    margin: 20px 0;
+}
+
+form label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+form input[type="email"],
+form input[type="text"],
+form textarea {
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    min-height: 100px;
+}
+
+/* Toggle Dark Mode button */
+.dark-mode-toggle {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 25px;  /* Curved edges */
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #202124;  /* Light Mode Text */
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+    background-color: #f1f3f4;
+    border-color: #aaa;
+}
+
+.dark-mode-toggle:active {
+    background-color: #e8eaed;
+}
+
+/* Dark Mode Specific Styles for the Toggle Button */
+.dark-mode .dark-mode-toggle {
+    background-color: #202124;
+    color: #e8eaed;  /* Dark Mode Text */
+    border-color: #5f6368;
+}
+
+.dark-mode .dark-mode-toggle:hover {
+    background-color: #303134;
+    border-color: #8ab4f8;
+}
+
+/* hr separator */
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .dark-mode-toggle {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
