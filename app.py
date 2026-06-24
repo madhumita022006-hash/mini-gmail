@@ -18,11 +18,11 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 # Database connection
 def get_db_connection():
     return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="Me_myself#07",
-        database="mini_gmail",
-        port=3306
+        host=os.environ.get("DB_HOST"),
+        user=os.environ.get("DB_USER"),
+        password=os.environ.get("DB_PASSWORD"),
+        database=os.environ.get("DB_NAME"),
+        port=int(os.environ.get("DB_PORT", 3306))
     )
 
 # Allowed file checker
